@@ -22,8 +22,8 @@ function mainLoop () {
 		tempY = e.pageY;
 		
 		// apply mouse pointer offset from actual canvas position
-		tempX = tempX - 155;
-	  	tempY = tempY - 80;
+		tempX = tempX - 125;
+	  	tempY = tempY - 65;
 	
 		highlightHexs(tempX,tempY);
 	});
@@ -105,7 +105,7 @@ function inHex(checkX, checkY, cx, cy, r) {
 	// check collision
     var overlapX = checkX - cx;
     var overlapY = checkY - cy;
-    var overlapR = r + 25; // make the pointer location a bit 'fatter' to help detection
+    var overlapR = r + 30; // make the pointer location a bit 'fatter' to help detection
     return ((overlapX*overlapX+overlapY*overlapY <= overlapR*overlapR) && (hexData[moveHex][0] != null));
 }
 
